@@ -1,0 +1,55 @@
+{
+  "name": "quiz-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.10.0",
+    "@mdi/font": "^5.1.45",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "axios": "^0.19.2",
+    "classnames": "^2.2.6",
+    "file-saver": "^2.0.2",
+    "infinite-react-carousel": "^1.2.11",
+    "material-ui": "^0.20.2",
+    "materialize-css": "^1.0.0",
+    "node-sass": "^4.14.1",
+    "nouislider": "^14.5.0",
+    "react": "^16.13.1",
+    "react-alice-carousel": "^1.19.2",
+    "react-bootstrap": "^1.0.1",
+    "react-bootstrap-switch": "^15.5.3",
+    "react-datetime": "^2.16.3",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.0.0",
+    "react-hook-form": "^5.7.2",
+    "react-items-carousel": "^2.8.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "reactstrap": "^8.4.1",
+    "slick-carousel": "^1.8.1",
+    "validate": "^5.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

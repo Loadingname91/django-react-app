@@ -1,0 +1,142 @@
+.pes
+{
+    position: relative;
+ transform: translate(10%,-15%);
+ font-family: verdana;
+ font-size:10em;
+ font-weight:800;
+margin-top:5px;
+/*-webkit-box-reflect:below 0 linear-gradient(transparent,rgba(0,0,0,0.5));*/
+ text-align: center;
+ 
+ text-shadow:1px 1px 2px rgba(255,255,255,0.4),
+ 1px 2px 2px rgba(255,255,255,0.4),
+ 1px 3px 2px rgba(255,255,255,0.4),
+ 1px 4px 2px rgba(255,255,255,0.4),
+ 1px 5px 2px rgba(255,255,255,0.4),
+ 1px 6px 2px rgba(255,255,255,0.4),
+ 1px 7px 2px rgba(255,255,255,0.4),
+ 1px 8px 2px rgba(255,255,255,0.4),
+ 1px 9px 2px rgba(255,255,255,0.4),
+ 1px 10px 2px rgba(255,255,255,0.4),
+ 1px 11px 2px rgba(255,255,255,0.4),
+ 1px 12px 2px rgba(255,255,255,0.4),
+ 1px 13px 2px rgba(255,255,255,0.4),
+ 1px 14px 2px rgba(255,255,255,0.4),
+ 4px 20px 8px rgba(0,0,0,0.4),
+4px 24px 12px rgba(1,1,1,0.4),
+4px 28px 38px rgba(1,1,1,0.4),
+4px 32px 46px rgba(0,0,0,0.4),
+4px 36px 52px rgba(1,1,1,0.4),
+4px 40px 58px rgba(1,1,1,0.4),
+4px 44px 67px rgba(1,1,1,0.4);
+animation:animates 5s linear forwards;
+
+}
+
+@keyframes animates
+{
+	0%
+	{
+		
+		left:100%;
+	}
+	100%
+	{
+		
+		left:-20%;
+
+		
+	}
+	
+}
+.cse
+{
+    position: relative;
+ transform: translate(10%,5%);
+ font-family: verdana;
+ font-size:10em;
+ font-weight:800;
+padding:0;
+margin-left:40%;
+margin-right:25%;
+
+ text-align: center;
+ text-shadow:1px 1px 2px rgba(255,255,255,0.4),
+ 1px 2px 2px rgba(255,255,255,0.4),
+ 1px 3px 2px rgba(255,255,255,0.4),
+ 1px 4px 2px rgba(255,255,255,0.4),
+ 1px 5px 2px rgba(255,255,255,0.4),
+ 1px 6px 2px rgba(255,255,255,0.4),
+ 1px 7px 2px rgba(255,255,255,0.4),
+ 1px 8px 2px rgba(255,255,255,0.4),
+ 1px 9px 2px rgba(255,255,255,0.4),
+ 1px 10px 2px rgba(255,255,255,0.4),
+ 1px 11px 2px rgba(255,255,255,0.4),
+ 1px 12px 2px rgba(255,255,255,0.4),
+ 1px 13px 2px rgba(255,255,255,0.4),
+ 1px 14px 2px rgba(255,255,255,0.4),
+4px 20px 8px rgba(0,0,0,0.4),
+4px 24px 12px rgba(1,1,1,0.4),
+4px 28px 38px rgba(1,1,1,0.2),
+4px 32px 67px rgba(1,1,1,0.4);
+animation:animate 5s linear forwards;
+
+}
+
+@keyframes animate
+{
+	0%
+	{
+		
+		left:100%;
+	}
+	100%
+	{
+		
+		left:-20%;
+
+		
+	}
+	
+}
+
+.first{
+    display:flex;
+	position: absolute;;
+	-webkit-box-reflect:below -12px linear-gradient(transparent,rgba(0,0,0,0.2));
+	top: 75%;
+	font-size:1.2em;
+	font-family:consolas;
+	font-weight: 800;
+	transform: translate(-5%,8%);
+	width:100%;
+	justify-content:center;
+    color:white;
+    padding-right:60%;
+    
+}	
+h2 header
+{
+	position:relative;
+	display:inline-block;
+    color:#fff;
+    font-size: 4em;
+ 
+	 text-shadow:1px 1px 2px rgba(255,255,255,0.4),
+        		 1px 2px 2px rgba(255,255,255,0.4),
+        		 1px 3px 2px rgba(255,255,255,0.4),
+    		     1px 4px 2px rgba(255,255,255,0.4),
+    		     1px 5px 2px rgba(255,255,255,0.4),
+   			     1px 6px 2px rgba(255,255,255,0.4),
+    			 1px 7px 2px rgba(255,255,255,0.4),
+    		     1px 8px 2px rgba(255,255,255,0.4),
+     	         1px 9px 2px rgba(255,255,255,0.4),
+    4px 20px 8px rgba(0,0,0,0.4),
+    4px 24px 12px rgba(1,1,1,0.4),
+    4px 28px 38px rgba(1,1,1,0.2),
+    4px 32px 67px rgba(1,1,1,0.4);
+    
+
+
+}

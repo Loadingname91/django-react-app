@@ -1,0 +1,94 @@
+.page-background{
+    background-color: blueviolet;
+    //background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+    height: 150vh;
+    width: 100vw;
+    position: relative
+}
+
+
+  #instruction {
+        padding-top: 10%;
+        border-radius: 5px;
+      
+        height: 80%;
+        width: 55%;
+        position: relative
+    }
+
+
+.instructions {
+    
+    border: 3px solid darken(black, 10%);
+    border-radius: 20px;
+    margin-top: 3rem;
+    margin-bottom: 3rem; 
+    padding: 1.5rem 3rem;
+    position: relative  
+}
+
+
+
+ 
+
+.next-button {
+    box-sizing: border-box;
+    appearance: none;
+    background-color: transparent;
+    border: 1px solid greenyellow;
+    border-radius: 0.6em;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 150;
+    line-height: 1;
+    margin: 2px;
+    padding: 1.5em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    position: relative;
+   
+
+&:hover,
+&:focus {
+  color: #fff;
+  outline: 0;
+}  
+}
+
+.next-button:hover {
+    background-color: darken(rgb(51, 255, 0), 10%);
+    box-shadow: $shadow;
+}
+
+ul {
+    color:$off-white;
+    font-size: $md;
+   
+}
+
+
+
+
+
+h1 {
+    color:$off-white;
+    font-size: $md;
+    text-align: center;
+}
+
+@media(max-width: 3rem-breakpoint) {
+    .instructions {
+        width: 50% !important;
+        height: 150% !important;
+    }
+ }

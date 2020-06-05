@@ -1,0 +1,92 @@
+url : localhost:8000/site_users/login/
+
+Usage : Used to display all the quizzes availabe on
+        the website EXCLUDING the user's registred one
+
+Input : form data contaning:
+        ex:
+        username:loading
+        password:password
+
+http header : no extra param
+
+Output : json data - EX:
+        if validated :
+                {
+            "user": {
+                "id": 4,
+                "name": "hitesh",
+                "email": "",
+                "username": "loading"
+            },
+            "token": "eaa604ef20aff6bad31895ea9293e21992646555486e3ce11ccbf0e629a09427"
+        }
+
+        else:
+
+         {
+            'detail': 'No users found with provided credentials , incorrect Password or username',
+
+        }
+
+
+
+url : localhost:8000/site_users/logout/
+
+Usage : Used to logout of the site
+
+Input : null
+
+http header : authentication details -
+              Content-Type:application/json
+              Authorization:Token eaa604ef20aff6bad31895ea9293e21992646555486e3ce11ccbf0e629a09427
+
+Output : json data - EX:
+        if validated :
+                {
+            "user": {
+                "id": 4,
+                "name": "hitesh",
+                "email": "",
+                "username": "loading"
+            },
+            "token": "eaa604ef20aff6bad31895ea9293e21992646555486e3ce11ccbf0e629a09427"
+        }
+
+        else:
+
+         {
+                "detail": "logged out successfully"
+         }
+
+url : localhost:8000/site_users/register/
+
+Usage : Used to register a user
+
+Input : form data containing:
+        name:
+        email:
+        username:
+        password:
+        year:
+        usn:
+        branch:
+
+http header : no extra params
+
+Output : json data - EX:
+        if validated :
+                {
+            "user": {
+                "id": 4,
+                "name": "",
+                "email": "",
+                "username": "",
+                "year" : "",
+                "usn": "",
+                "branch": ""
+            },
+            "token": "eaa604ef20aff6bad31895ea9293e21992646555486e3ce11ccbf0e629a09427"
+        }
+
+

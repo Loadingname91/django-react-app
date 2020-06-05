@@ -1,0 +1,142 @@
+#home {
+    background-color: blueviolet;
+    //background-size: cover;
+    padding-top: 5%;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+    height: 100vh;
+    width: 100vw;
+
+    #heading {
+        color: white;
+        //padding-top: 30%;
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    section {
+        background-color: transparent;
+        border-radius: 5px;
+        padding-left: 3rem;
+        padding-right: 3rem; 
+        height: 97%;
+        width: 35%;
+    }
+
+    .cube {
+        font-size: 10rem;
+        color: orange;
+    }
+
+    .play-button-container {
+        width: 100%;
+    }
+
+    
+
+    .play-button {
+        position: relative;
+       
+        box-sizing: border-box;
+        appearance: none;
+        background-color: transparent;
+        border: 2px solid purple;
+        border-radius: 0.6em;
+        color: white;
+        cursor: pointer;
+        display: flex;
+        align-self: center;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1;
+        margin: 10px;
+        padding: 1.5em 2.8em;
+        text-decoration: none;
+        text-align: center;
+        justify-content: center;
+        text-transform: uppercase;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+       
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      outline: 0;
+    }
+  }
+  .first {
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    &:hover {
+      box-shadow: 0 0 40px 40px purple inset;
+    }
+  }
+
+    .auth-container {
+        width: 100%;
+        margin-top: 3rem; 
+    }
+
+    #login-button {
+        box-sizing: border-box;
+        appearance: none;
+        background-color: transparent;
+        border: 2px solid red;
+        border-radius: 0.6em;
+        color: white;
+        cursor: pointer;
+        display: flex;
+        align-self: center;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1;
+        top:75%;
+        margin: 10px;
+        padding: 1.5em 2.8em;
+        text-decoration: none;
+        text-align: center;
+        justify-content: center;
+        text-transform: uppercase;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+       
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      outline: 0;
+    }  
+    }
+
+    #login-button:hover {
+        background-color: darken(red, 10%);
+        box-shadow: $shadow;
+    }
+
+    #signup-button {
+        background-color: blue;
+    }
+
+    #signup-button:hover {
+        background-color: darken(blue, 10%);
+        box-shadow: $shadow; 
+    }
+    .auth-container .auth-buttons {
+        color: white;
+        cursor: pointer;
+        border-radius: 30px;
+        padding: 1rem 0;
+        text-align: center;
+        transition: 0.3s linear all;
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    #home section {
+        padding: 0 1rem;
+        width: 100%;
+        height: 100%;
+    }
+}

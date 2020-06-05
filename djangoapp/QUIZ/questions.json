@@ -1,0 +1,26 @@
+[
+  {
+    "model": "main_quiz.Question" ,
+    "fields": {
+      "label": "what is the full form of covid?" ,
+      "order": 0 ,
+      "quiz_id": 5
+    }
+  } ,
+  {
+    "model": "main_quiz.Question" ,
+    "fields": {
+      "label": "who is the father of the nation?" ,
+      "order": 0 ,
+      "quiz_id": 5
+    }
+  } ,
+  {
+    "model": "main_quiz.Question" ,
+    "fields": {
+      "label": "who the ceo of microsoft?" ,
+      "order": 0 ,
+      "quiz_id": 5
+    }
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "model": "main_quiz.Answer",
+    "fields": {
+      "label": "corona_virus",
+      "is_correct": 1,
+      "question_id": 7
+    }
+  },
+  {
+    "model": "main_quiz.Answer",
+    "fields": {
+      "label": "corono",
+      "is_correct": 0,
+      "question_id": 7
+    }
+  },
+  {
+    "model": "main_quiz.Answer",
+    "fields": {
+      "label": "civid_19",
+      "is_correct": 0,
+      "question_id": 7
+    }
+  },
+  {
+    "model": "main_quiz.Answer",
+    "fields": {
+      "label": "sars_2019",
+      "is_correct": 0,
+      "question_id": 7
+    }
+  },
+  {
+    "model": "main_quiz.Answer",
+    "fields": {
+      "label": "Mahatma Ghandhi",
+      "is_correct": 1,
+      "question_id": 8
+    }
+  },
+  {
+    "model": "main_quiz.Answer",
+    "fields": {
+      "label": "Narendra Modi",
+      "is_correct": 0,
+      "question_id": 8
+    }
+  },
+  {
+    "model": "main_quiz.Answer",
+    "fields": {
+      "label": "Donal Trump",
+      "is_correct": 0,
+      "question_id": 8
+    }
+  },
+  {
+    "model": "main_quiz.Answer",
+    "fields": {
+      "label": "Vajpai",
+      "is_correct": 0,
+      "question_id": 8
+    }
+  },
+  {
+    "model": "main_quiz.Answer",
+    "fields": {
+      "label": "Sundar Pichai",
+      "is_correct": 0,
+      "question_id": 9
+    }
+  },
+  {
+    "model": "main_quiz.Answer",
+    "fields": {
+      "label": "Satya Nadella",
+      "is_correct": 1,
+      "question_id": 9
+    }
+  },
+  {
+    "model": "main_quiz.Answer",
+    "fields": {
+      "label": "Elon Mush",
+      "is_correct": 0,
+      "question_id": 9
+    }
+  },
+  {
+    "model": "main_quiz.Answer",
+    "fields": {
+      "label": "Satya kumar",
+      "is_correct": 0,
+      "question_id": 9
+    }
+  }
+]

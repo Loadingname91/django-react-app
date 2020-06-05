@@ -1,0 +1,14 @@
+[
+  {
+      "model": "main_quiz.Quiz",
+      "fields": {
+          "name": "Quizathon by IEEE",
+          "description": "Quiz conducted to give little insight to pre final year students and 2 year students to placements",
+          "image" : "fig1.png",
+          "timestamp" : "2020-05-03 19:06:25.679327",
+          "roll_out" : 0,
+          "approx_questions": 30,
+          "negative_marking" : 0
+      }
+  }
+]

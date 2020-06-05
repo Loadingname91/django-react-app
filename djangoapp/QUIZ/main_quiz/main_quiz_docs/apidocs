@@ -1,0 +1,509 @@
+url : localhost:8000/views/quizzes/slug
+
+Usage : Used to display all the quizzes availabe on
+        the website EXCLUDING the user's registred one
+
+Input : (Optional query parametery
+        localhost:8000/views/quizzes/?q = "quiz required")
+http header : authentication details -
+              Content-Type:application/json
+              Authorization:Token eaa604ef20aff6bad31895ea9293e21992646555486e3ce11ccbf0e629a09427
+
+Output : json data - EX:
+        if there are quizzes:
+             [
+        {
+            "id": 5,
+            "name": "Quizathon by IEEE",
+            "description": "Quiz conducted to give little insight to pre final year students and 2 year students to placements",
+            "image": "fig_9_TMHiMhf.PNG",
+            "slug": "quizathon-by-ieee",
+            "questions_count": 3
+        }
+            ]
+        else :
+          {
+              "detail": "No upcomming quizzes yet stay tuned :)"
+          }
+
+
+
+
+url : localhost:8000/views/all_quizzes
+
+Usage : Used to display all the quizzes availabe on
+        the website INCLUDING the user's registered one
+
+Input : (Optional query parametery
+        localhost:8000/views/all_quizzes/?q = "quiz required")
+http header : authentication details -
+              Content-Type:application/json
+              Authorization:Token eaa604ef20aff6bad31895ea9293e21992646555486e3ce11ccbf0e629a09427
+
+Output : json data - EX:
+        if there are quizzes:
+             [
+        {
+            "id": 5,
+            "name": "Quizathon by IEEE",
+            "description": "Quiz conducted to give little insight to pre final year students and 2 year students to placements",
+            "image": "fig_9_TMHiMhf.PNG",
+            "slug": "quizathon-by-ieee",
+            "questions_count": 3
+        }
+            ]
+        else :
+          {
+              "detail": "No upcomming quizzes yet stay tuned :)"
+          }
+
+
+
+url : localhost:8000/views/quizzes/<slug:slug>
+      note: slugs are stored in the db and required in the correct name as they are stored
+      ex : localhost:8000/views/quizzes/ieee-quizathon
+
+
+Usage : Used to display all the questions on the quiz
+        to start the quiz requestd in the slug
+        note: this is the url from which the quiz
+        questions and options are delivered to the
+        user
+
+Input :  Null
+
+http header : authentication details -
+              Content-Type:application/json
+              Authorization:Token eaa604ef20aff6bad31895ea9293e21992646555486e3ce11ccbf0e629a09427
+
+Output : json data - EX:
+        if registred to view the questions:
+                       {
+                "quiz": {
+                    "id": 1,
+                    "quiztakers_set": {
+                        "id": 44,
+                        "usersanswer_set": [
+                            {
+                                "id": 108,
+                                "quiz_taker": 44,
+                                "question": 5,
+                                "answer": null
+                            },
+                            {
+                                "id": 107,
+                                "quiz_taker": 44,
+                                "question": 1,
+                                "answer": null
+                            }
+                        ],
+                        "score": 0,
+                        "completed": false,
+                        "date_finished": null,
+                        "timestamp": "2020-05-11T01:30:03.294366",
+                        "user": 4,
+                        "quiz": 1
+                    },
+                    "name": "IEEE QUIZATHON",
+                    "description": "QUIZ for pre final year batch",
+                    "image": "http://localhost:8000/views/quizzes/fig_11_QNpXhcw.PNG",
+                    "slug": "ieee-quizathon",
+                    "roll_out": true,
+                    "timestamp": "2020-05-02T14:06:25.679327",
+                    "approx_questions": 2,
+                    "negative_marking": true,
+                    "question_set": [
+                        {
+                            "label": "What is the capital of India?",
+                            "answer_set": [
+                                {
+                                    "id": 17,
+                                    "question_id": 5,
+                                    "label": "Delhi"
+                                },
+                                {
+                                    "id": 18,
+                                    "question_id": 5,
+                                    "label": "gujart"
+                                },
+                                {
+                                    "id": 19,
+                                    "question_id": 5,
+                                    "label": "bombay"
+                                },
+                                {
+                                    "id": 20,
+                                    "question_id": 5,
+                                    "label": "bangalore"
+                                }
+                            ],
+                            "id": 5
+                        },
+                        {
+                            "label": "What is the square root of 34?",
+                            "answer_set": [
+                                {
+                                    "id": 1,
+                                    "question_id": 1,
+                                    "label": "5.32"
+                                },
+                                {
+                                    "id": 2,
+                                    "question_id": 1,
+                                    "label": "3.33"
+                                },
+                                {
+                                    "id": 3,
+                                    "question_id": 1,
+                                    "label": "4.22"
+                                },
+                                {
+                                    "id": 4,
+                                    "question_id": 1,
+                                    "label": "5.83"
+                                }
+                            ],
+                            "id": 1
+                        }
+                    ]
+                },
+                "last_question_id": null
+            }
+
+
+        else :
+
+        {
+          "detail": " You have not yet registered for quiz "
+        }
+
+url : localhost:8000/views/register_quizzes/<slug:slug>
+      note: slugs are stored in the db and required in the correct name as they are stored
+      ex : localhost:8000/views/quizzes/ieee-quizathon
+Usage : Used to register to a quiz
+
+
+Input : (Optional query parametery
+        localhost:8000/views/register_quizzes/?q = "quiz required")
+http header : authentication details -
+              Content-Type:application/json
+              Authorization:Token eaa604ef20aff6bad31895ea9293e21992646555486e3ce11ccbf0e629a09427
+
+Output : json data - EX:
+        if successful registration:
+           {
+                "detail": "Successfully Registered for the quiz"
+            }
+        if already registerd and sent a reposne:
+            {
+            "detail": "You have Already Registered"
+            }
+        (wont happen but)if tried to register by clicking on a non roll out quiz:
+           {
+                "detail": "Quiz is still being formatted please come back later"
+            }
+
+
+
+url : localhost:8000/views/quizzes/<slug:slug>/submit
+      note: slugs are stored in the db and required in the correct name as they are stored
+      ex : localhost:8000/views/quizzes/ieee-quizathon
+
+Usage : Used to submit the quiz once done
+
+Input :  form data containing id wrt:
+        ex data:
+        quiztaker: 36
+        question:6
+        answer:21
+
+
+http header : authentication details -
+              Content-Type:application/json
+              Authorization:Token eaa604ef20aff6bad31895ea9293e21992646555486e3ce11ccbf0e629a09427
+
+Output : json data - EX:
+                {
+                    "id": 1,
+                    "quiztaker_set": {
+                        "id": 44,
+                        "usersanswer_set": [
+                            {
+                                "id": 108,
+                                "quiz_taker": 44,
+                                "question": 5,
+                                "answer": 17
+                            },
+                            {
+                                "id": 107,
+                                "quiz_taker": 44,
+                                "question": 1,
+                                "answer": null
+                            }
+                        ],
+                        "score": 50,
+                        "completed": true,
+                        "date_finished": null,
+                        "timestamp": "2020-05-11T01:30:03.294366",
+                        "user": 4,
+                        "quiz": 1
+                    },
+                    "question_set": [
+                        {
+                            "id": 1,
+                            "answer_set": [
+                                {
+                                    "id": 1,
+                                    "question": 1,
+                                    "label": "5.32"
+                                },
+                                {
+                                    "id": 2,
+                                    "question": 1,
+                                    "label": "3.33"
+                                },
+                                {
+                                    "id": 3,
+                                    "question": 1,
+                                    "label": "4.22"
+                                },
+                                {
+                                    "id": 4,
+                                    "question": 1,
+                                    "label": "5.83"
+                                }
+                            ],
+                            "label": "What is the square root of 34?",
+                            "order": 0,
+                            "quiz": 1
+                        },
+                        {
+                            "id": 2,
+                            "answer_set": [
+                                {
+                                    "id": 5,
+                                    "question": 2,
+                                    "label": "Donald Trump"
+                                },
+                                {
+                                    "id": 6,
+                                    "question": 2,
+                                    "label": "Obama"
+                                },
+                                {
+                                    "id": 7,
+                                    "question": 2,
+                                    "label": "Modi"
+                                },
+                                {
+                                    "id": 8,
+                                    "question": 2,
+                                    "label": "Jack Daniels"
+                                }
+                            ],
+                            "label": "Who is the president of USA?",
+                            "order": 0,
+                            "quiz": 1
+                        },
+                        {
+                            "id": 5,
+                            "answer_set": [
+                                {
+                                    "id": 17,
+                                    "question": 5,
+                                    "label": "Delhi"
+                                },
+                                {
+                                    "id": 18,
+                                    "question": 5,
+                                    "label": "gujart"
+                                },
+                                {
+                                    "id": 19,
+                                    "question": 5,
+                                    "label": "bombay"
+                                },
+                                {
+                                    "id": 20,
+                                    "question": 5,
+                                    "label": "bangalore"
+                                }
+                            ],
+                            "label": "What is the capital of India?",
+                            "order": 0,
+                            "quiz": 1
+                        },
+                        {
+                            "id": 6,
+                            "answer_set": [
+                                {
+                                    "id": 21,
+                                    "question": 6,
+                                    "label": "sports company"
+                                },
+                                {
+                                    "id": 22,
+                                    "question": 6,
+                                    "label": "chocolate bar"
+                                },
+                                {
+                                    "id": 23,
+                                    "question": 6,
+                                    "label": "mint"
+                                },
+                                {
+                                    "id": 24,
+                                    "question": 6,
+                                    "label": "shoe polish"
+                                }
+                            ],
+                            "label": "what is Nike?",
+                            "order": 0,
+                            "quiz": 1
+                        }
+                    ],
+                    "name": "IEEE QUIZATHON",
+                    "description": "QUIZ for pre final year batch",
+                    "image": "http://localhost:8000/views/quizzes/ieee-quizathon/submit/fig_11_QNpXhcw.PNG",
+                    "slug": "ieee-quizathon",
+                    "roll_out": true,
+                    "timestamp": "2020-05-02T14:06:25.679327",
+                    "approx_questions": 2,
+                    "negative_marking": true,
+                    "score": 50.0
+                }
+
+url : localhost:8000/views/save_answer/<slug:slug>
+
+Usage : Used to save the answer pertaining to the
+        provided ids of the one in the form data
+
+Input : form data containing id wrt:
+        ex data:
+        quiztaker: 36
+        question:6
+        answer:21
+
+http header : authentication details -
+              Content-Type:application/json
+              Authorization:Token eaa604ef20aff6bad31895ea9293e21992646555486e3ce11ccbf0e629a09427
+
+Output : json data - EX:
+         note: id belongs to the user_answer id in the db reference
+            {
+        "id": 89,
+        "quiz_taker": 36,
+        "question": 6,
+        "answer": 21
+        }
+
+
+url : localhost:8000/views/my_quizzes/
+
+Usage : Used to display all the quizzes the user has
+        registered.
+
+Input : Null
+
+http header : authentication details -
+              Content-Type:application/json
+              Authorization:Token eaa604ef20aff6bad31895ea9293e21992646555486e3ce11ccbf0e629a09427
+
+Output : json data - EX:
+        if there are quizzes:
+                     [
+            {
+                "id": 1,
+                "name": "IEEE QUIZATHON",
+                "description": "QUIZ for pre final year batch",
+                "image": "http://localhost:8000/views/my-quizzes/fig_11_QNpXhcw.PNG",
+                "slug": "ieee-quizathon",
+                "questions_count": 4,
+                "completed": true,
+                "progress": null,
+                "score": 50
+            },
+            {
+                "id": 2,
+                "name": "Mock placements",
+                "description": "Mock placements test",
+                "image": "http://localhost:8000/views/my-quizzes/fig_12.PNG",
+                "slug": "mock-placements",
+                "questions_count": 2,
+                "completed": false,
+                "progress": 0,
+                "score": null
+            }
+        ]
+        else :
+         []
+
+url : localhost:8000/views/results_quiz/
+
+Usage : Used to display the status of the all
+        the quiz on the website
+        NOTE : REQUIRES ADMIN LOGIN
+Input :
+
+http header : authentication details -
+              Content-Type:application/json
+              Authorization:Token eaa604ef20aff6bad31895ea9293e21992646555486e3ce11ccbf0e629a09427
+
+Output : json data - EX:
+        if there are participants in anyone of the quiz and have completed it:
+                    {
+            "data": [
+                {
+                    "quiz name": "IEEE QUIZATHON",
+                    "message": "No participants have completed yet"
+                },
+                {
+                    "score": "50%",
+                    "username": "hitesh",
+                    "email": "gopinathhitesh@gmail.com",
+                    "negative_marking": false,
+                    "quiz name": "Mock placements"
+                },
+                {
+                    "quiz name": "Quizathon by IEEE",
+                    "message": "No participants have completed yet"
+                }
+            ]
+        }
+        else :
+                  {
+            "data": [
+                {
+                    "quiz name": "IEEE QUIZATHON",
+                    "message": "No participants have completed yet"
+                },
+                {
+                    "quiz name": "Mock placements",
+                    "message": "No participants have completed yet"
+                },
+                {
+                    "quiz name": "Quizathon by IEEE",
+                    "message": "No participants have completed yet"
+                }
+            ]
+        }
+
+NOTE: ANOTHER API WHICH LISTS ALL THE QUIZ FOR THE USER
+      TO THEN CLICK TO DOWNLOAD HAS NOT BEEN COMPLETED
+
+url : localhost:8000/views/download_quiz/<slug:slug>
+      Note: slugs are stored in the db and required in the correct name as they are stored
+      ex : localhost:8000/views/quizzes/ieee-quizathon
+
+Usage : Used to download results of the quiz as
+        provided in the slug of the url.
+
+Input : Null
+
+http header : authentication details -
+              Content-Type:application/json
+              Authorization:Token eaa604ef20aff6bad31895ea9293e21992646555486e3ce11ccbf0e629a09427
+
+Output : json data - EX:
+         downloadable excel file containing the
+         results of the requested quiz

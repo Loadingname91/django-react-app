@@ -1,0 +1,11 @@
+1.import os
+  os.environ.setdefault('FORKED_BY_MULTIPROCESSING', '1')
+
+2. start rabbitmq server
+    for  linux sys
+        $ sudo rabbitmq-server and keep the terminal session opened.
+        $ sudo rabbitmq-server -detached if you want to run RabbitMQ in the background.
+
+3. celery command
+
+    $ celery -A QUIZ worker -l info
