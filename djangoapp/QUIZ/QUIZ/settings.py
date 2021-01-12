@@ -159,8 +159,8 @@ EMAIL_BACKEND = 'djcelery_email.backends.CeleryEmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'pesitmcseieee@gmail.com'
-EMAIL_HOST_PASSWORD = 'pesitmieee@1'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
 
 from datetime import timedelta
 from rest_framework.settings import api_settings
